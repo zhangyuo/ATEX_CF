@@ -170,7 +170,7 @@ elif test_model == 'GAT':
 ######################### select test nodes  #########################
 if dataset_name == "ogbn-arxiv":
     idx_test = target_node_id
-target_node_list, target_node_list1 = select_test_nodes(dataset_name, attack_type, idx_test, y_pred_orig, labels)
+target_node_list, target_node_list1 = select_test_nodes(dataset_name, attack_type, idx_test, y_pred_orig, labels, sample_num_per_cls=None)
 target_node_list += target_node_list1
 target_node_list.sort()
 print(f"Test nodes number: {len(target_node_list)}, incorrect: {len(target_node_list1)}")
